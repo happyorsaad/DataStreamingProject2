@@ -106,11 +106,11 @@ if __name__ == "__main__":
         .builder \
         .master("local[*]") \
         .config("spark.ui.port",3000) \
-        .config("spark.sql.shuffle.partitions", 300) \
+        .config("spark.sql.shuffle.partitions", 30) \
         .appName("KafkaSparkStructuredStreaming") \
         .getOrCreate()
     
-#     spark.sparkContext.setLogLevel("WARN)
+    spark.sparkContext.setLogLevel("WARN)
 
     logger.info("Spark started")
 
